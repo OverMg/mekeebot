@@ -6,8 +6,15 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('ban')
         .setDescription('beanea un miembro de este servidor.')
-        .addUserOption(option => option.setName('miembro').setDescription('Menciona al miembro que quieres beanear').setRequired(true))
-        .addStringOption(option => option.setName('razon').setDescription('motivo de la expulsion').setRequired(true)),
+        .addUserOption(option => 
+            option
+            .setName('miembro')
+            .setDescription('Menciona al miembro que quieres beanear')
+            .setRequired(true))
+        .addStringOption(option => option
+            .setName('razon')
+            .setDescription('motivo de la expulsion')
+            .setRequired(true)),
     async run(client, interaction, language) {
         const user = interaction.options.getMember('miembro');
         if (!interaction.member.permissions.has('BAN_MEMBERS')) {
