@@ -1,0 +1,9 @@
+{
+    "token": "OTQwMzUzNzMxMTcyNjU1MTY0.YgGKqA.m4QI-kkylVO-GysANPwThzn0kYk",
+    "clientId": "940353731172655164",
+    "guildId": "865295963916468265",
+    "default_prefix": ":",
+    "defaultSuccessColor": "PURPLE",
+    "defaultErrorColor": "RED",
+    "mongoURL": "mongodb+srv://overmage:ExtXUScp2w0PQW32@cluster0.hreya.mongodb.net/reiniciado"
+}

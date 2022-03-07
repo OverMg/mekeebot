@@ -1,0 +1,75 @@
+{
+	"utilities": {
+		"errorEmbed": "Error",
+		"noInvitePerms": "Necesito el permiso de `crear invitaciones` para ejecutar este comando",
+		"unexpectedError": "Ha ocurrido un error inesperado",
+		"badRequest": "la solicitud no se ejecuto correctamente"
+	},
+	"avatar": {
+		"self": "Aqui esta tu avatar.",
+		"miembro": "aqui esta el avatar de {username}.",
+		"miembro {{username}}": "avatar.miembro {username}"
+	},
+	"banner": {
+		"self": "Aqui esta tu banner.",
+		"miembro": "aqui esta el banner de {username}.",
+		"miembro {{username}}": "banner.miembro {username}"
+	},
+	"lang": {
+		"newLanguage": "Has elegido un nuevo lenguaje",
+		"noAdministrator": "no tienes permiso para ejecutar este comando"
+	},
+	"youtube": {
+		"noChannel": "Debes estar en un canal de voz para ejecutar este comando",
+		"loading": "iniciando sesion de youtube",
+		"inviteMessage": "**[Haz Click Aqui]({inviteLink} 'Link De Youtube' )**"
+	},
+	"CLEAR": {
+		"1": "No tienes permisos de **GESTIÓN DE MENSAJES** para usar este comando.",
+		"2": "No tengo permisos de **GESTIÓN DE MENSAJES** para usar este comando.",
+		"3": "bots",
+		"4": " - Elimina los mensajes enviados por los bots. (Ignorar a los humanos)",
+		"5": "humans",
+		"6": " - Elimina los mensajes enviados por humanos. (Ignorar los bots)",
+		"7": "embeds",
+		"8": " - Elimina los mensajes que contienen embeds.",
+		"9": "files",
+		"10": " - Elimina los mensajes que contienen archivos/imágenes/adjuntos.",
+		"11": "mentions",
+		"12": " - Elimina los mensajes que contengan menciones a miembros/usuarios/canales/roles.",
+		"13": "pins",
+		"14": " - Elimina los mensajes anclados.",
+		"19": "text",
+		"20": " - Elimina los mensajes que sólo contienen texto. (Ignora archivos/imágenes/adjuntos, embeds)",
+		"21": "match <text>",
+		"22": " - Elimina los mensajes que contienen texto.",
+		"23": "not <text>",
+		"24": " - Elimina los mensajes que no contienen texto.",
+		"25": "startswith <text>",
+		"26": " - Elimina los mensajes que empiezan con un texto..",
+		"27": "endswith <text>",
+		"28": " - Elimina los mensajes que acaban con un texto.",
+		"29": "Purge | Clear | Delete | Prune",
+		"30": "Elimina un número de mensajes de un canal. (Ignora los mensajes anclados y el límite es 100)",
+		"31": "Uso",
+		"32": "clear <cantidad>",
+		"33": " - Borrar un número de mensajes.\n",
+		"34": "clear <cantidad> --",
+		"35": "purge",
+		"36": "clear",
+		"37": "delete",
+		"38": "prune",
+		"39": "Por favor, introduzca un número de mensajes para purgar.",
+		"40": "Introduzca un número de mensaje entre 2 y 100.",
+		"41": "<a:tick:836295873091862568>  ¡Borré **",
+		"42": "** mensajes!",
+		"43": "Sólo puedes eliminar los mensajes que no tengan más de 14 días de antigüedad.",
+		"44": "Borré **",
+		"45": "** mensajes!",
+		"46": "Sólo puedes eliminar los mensajes que no tengan más de 14 días de antigüedad.",
+		"47": "Borré **",
+		"48": "** mensajes!",
+		"49": "Se ha producido un error.",
+		"50": "Se ha producido un error: "
+	  }
+}
