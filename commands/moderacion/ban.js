@@ -58,7 +58,8 @@ module.exports = {
             .setColor(config.defaultSuccessColor)
             .setTitle(`Baneado`)
             .setDescription(`Has baneado a **${user.displayName}** correctamente\nCon el motivo: \`${motivo}\``)
-            return interaction.followUp({embeds: [embed2]});
+            .setFooter(user.user.username, user.user.avatarURL());
+            return interaction.reply({embeds: [embed2]});
             
         }).catch((e) => {
             console.error(e)
