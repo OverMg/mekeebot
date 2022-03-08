@@ -27,6 +27,21 @@ module.exports = {
             case  'poker':
                 applicationID = '755827207812677713'
                 break
+            case 'betrayal':
+                applicationID = '773336526917861400'
+                break
+            case 'puttparty':
+                applicationID = '763133495793942528'
+                break
+            case 'ocho':
+                applicationID = '832025144389533716'
+                break
+            case 'checkers':
+                applicationID = '832013003968348200'
+                break
+            case 'lettertile':
+                applicationID = '879863686565621790'
+                break
         }
         createTogetherCode(client, interaction.member.voice.channel.id, applicationID, 0)
         .then(invite => {

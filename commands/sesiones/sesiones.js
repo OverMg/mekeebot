@@ -18,15 +18,21 @@ module.exports = {
                     description: 'Inicia youtube together',
                     value: 'youtube'
                 },
+
                 {
                     label: 'Ajedrez',
                     description: 'inicia una partida de ajedrez en un canal de voz',
                     value: 'chess'
                 },
                 {
-                    label: 'poker',
-                    description: 'inicia una partida de poker compartida en un canal de voz',
-                    value: 'poker'
+                    label: 'Damas',
+                    description: 'inicia una patida de damas en un canal de voz',
+                    value: 'checkers'
+                },
+                {
+                    label: 'Ocho',
+                    description: 'inicia una partida de ocho en un canal de voz',
+                    value: 'ocho'
                 }
             ])
         )
