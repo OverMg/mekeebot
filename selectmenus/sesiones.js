@@ -9,7 +9,14 @@ module.exports = {
         name: 'sesion'
     },
     async run(client, interaction, language) {
-        if (!interaction.member.voice.channel) return interaction.update({ content: client.languages.__({ phrase: 'youtube.noChannel', locale: language }), ephemeral: true })
+        noChannelEmbed = new MessageEmbed()
+        .setColor(config.defaultErrorColor)
+        .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
+        .setTitle("Error, No te veo en ningun canal de voz")
+        .setDescription("```" + client.languages.__({ phrase: 'youtube.noChannel', locale: language }) + "```")
+        .setFooter(client.user.username, client.user.avatarURL());
+        if (!interaction.member.voice.channel)        
+        return interaction.update({embeds: [noChannelEmbed]})
         switch (interaction.values[0]) {
             case 'youtube':
                 applicationID = '880218394199220334'
@@ -21,12 +28,12 @@ module.exports = {
                 applicationID = '755827207812677713'
                 break
         }
-        createTogetherCode(client, interaction.member.voice.channel.id, applicationID, 900)
+        createTogetherCode(client, interaction.member.voice.channel.id, applicationID, 0)
         .then(invite => {
             const embed = new MessageEmbed()
-                embed.setColor(config.defaultSuccessColor)
-                embed.setTitle('Para poner una aplicacion en un canal de voz y verlo con tus amigos')
-                embed.setDescription(
+                .setColor(config.defaultSuccessColor)
+                .setTitle('Para poner una aplicacion en un canal de voz y verlo con tus amigos')
+                .setDescription(
                     client.languages.__mf({ phrase: 'youtube.inviteMessage', locale: language }, { inviteLink: invite.code })
                     );
                     return interaction.update({content: ' ', components: [], embeds: [embed]});

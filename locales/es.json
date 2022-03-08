@@ -22,7 +22,8 @@
 	"youtube": {
 		"noChannel": "Debes estar en un canal de voz para ejecutar este comando",
 		"loading": "iniciando sesion de youtube",
-		"inviteMessage": "**[Haz Click Aqui]({inviteLink} 'Link De Youtube' )**"
+		"inviteMessage": "**[Haz Click Aqui]({inviteLink} 'Link De Youtube' )**",
+		"noChannel```": "youtube.noChannel```"
 	},
 	"CLEAR": {
 		"1": "No tienes permisos de **GESTIÓN DE MENSAJES** para usar este comando.",
@@ -71,5 +72,5 @@
 		"48": "** mensajes!",
 		"49": "Se ha producido un error.",
 		"50": "Se ha producido un error: "
-	  }
+	}
 }

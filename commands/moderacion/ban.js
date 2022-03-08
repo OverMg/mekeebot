@@ -55,10 +55,12 @@ module.exports = {
 
         await user.ban(user).then(async => {
             const embed2 = new MessageEmbed()
+            .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
             .setColor(config.defaultSuccessColor)
-            .setTitle(`Baneado`)
-            .setDescription(`Has baneado a **${user.displayName}** correctamente\nCon el motivo: \`${motivo}\``)
-            .setFooter(user.user.username, user.user.avatarURL());
+            .setTitle(`Ha usado /kick`)
+            .addField('He baneado a', "```" + `${user.displayName}` + "```", false)
+            .addField('Motivo', "```" + `${motivo}` + "```", false)
+            .setFooter(client.user.username, client.user.avatarURL())
             return interaction.reply({embeds: [embed2]});
             
         }).catch((e) => {

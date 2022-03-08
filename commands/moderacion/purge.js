@@ -1,4 +1,5 @@
-const { SlashCommandBuilder } = require('@discordjs/builders')
+const { SlashCommandBuilder } = require('@discordjs/builders');
+const { MessageEmbed } = require('discord.js');
 const config = require('../../config.json')
 
 module.exports = {
@@ -24,8 +25,12 @@ module.exports = {
 			console.error(error);
 			interaction.reply({ content: 'Cachon por alguna razon no puedo eliminar mensajes aqui' });
 		});
-
-		return interaction.reply({ content: `Elimine \`${amount}\` mensajes.` });
-		
+		embed = new MessageEmbed()
+		.setColor(config.defaultSuccessColor)
+		.setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
+		.setTitle('Ha usado /purge')
+		.addField('Elimine', "```" + `${amount}` + "```", false)
+		.setFooter(client.user.username, client.user.avatarURL())
+		return interaction.reply({embeds: [embed]});
 	},
 };

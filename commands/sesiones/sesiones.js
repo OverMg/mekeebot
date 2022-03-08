@@ -1,5 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
-const { MessageSelectMenu, MessageActionRow } = require('discord.js')
+const { MessageEmbed, MessageSelectMenu, MessageActionRow } = require('discord.js')
+const config = require('../../config.json')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -29,6 +30,12 @@ module.exports = {
                 }
             ])
         )
-        await interaction.reply({content: 'selecciona una aplicacion para iniciar la sesion compartida.', components: [row]})
+        embed = new MessageEmbed()
+		.setColor(config.defaultSuccessColor)
+		.setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
+		.setTitle('Ha usado /sesion')
+		.setDescription("```" + 'Selecciona una aplicacion para iniciar la sesion compartida.' + "```")
+		.setFooter(client.user.username, client.user.avatarURL())
+        await interaction.reply({embeds: [embed], components: [row]})
     }
 }

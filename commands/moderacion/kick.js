@@ -59,9 +59,12 @@ module.exports = {
         await user.kick(user).then(async(miembro) => {
                 
             const embed2 = new MessageEmbed()
+            .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
             .setColor(config.defaultSuccessColor)
-            .setTitle(`Expulsado`)
-            .setDescription(`Has expulsado a **${user.displayName}** Exitosamente\nCon el motivo: \`${motivo}\``)
+            .setTitle(`Ha usado /kick`)
+            .addField('Elimine a', "```" + `${user.displayName}` + "```", false)
+            .addField('Motivo', "```" + `${motivo}` + "```", false)
+            .setFooter(client.user.username, client.user.avatarURL())
             return interaction.reply({embeds: [embed2]});
             
         }).catch((e) => {
