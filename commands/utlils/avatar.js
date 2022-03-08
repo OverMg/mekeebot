@@ -15,6 +15,7 @@ module.exports = {
             .setColor(config.defaultSuccessColor)
             .setDescription(client.languages.__mf({phrase: 'avatar.miembro', locale: language}, {username: user.username}))
             .setImage(user.user.displayAvatarURL({dynamic: true, size: 4096}))
+            .setFooter(client.user.username, client.user.avatarURL())
             return interaction.reply({embeds: [embed]})
         } else {
             const embed = new MessageEmbed()
