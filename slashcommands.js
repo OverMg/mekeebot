@@ -18,7 +18,7 @@ async function createSlash() {
             }
         })
         await rest.put(
-            Routes.applicationGuildCommands(clientId, guildId),
+            Routes.applicationCommands(clientId),
             { body: commands }
         )
         console.log('commands publicados correctamente')
