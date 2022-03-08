@@ -14,7 +14,7 @@ module.exports = {
             .setAuthor({ name: `${user.user.username}`, iconURL: `${user.user.displayAvatarURL()}`})
             .setColor(config.defaultSuccessColor)
             .setDescription(client.languages.__mf({phrase: 'avatar.miembro', locale: language}, {username: user.username}))
-            .setImage(user.displayAvatarURL({dynamic: true, size: 4096}))
+            .setImage(user.user.displayAvatarURL({dynamic: true, size: 4096}))
             return interaction.reply({embeds: [embed]})
         } else {
             const embed = new MessageEmbed()
