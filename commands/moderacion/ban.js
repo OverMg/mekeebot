@@ -30,10 +30,10 @@ module.exports = {
             return interaction.reply({ embeds: [embed] })
         }
         if (user.id === interaction.member.id) {
-            return interaction.reply(' como te vas a banear a ti mismo?, pedazo de estupido')
+            return interaction.reply(' como te vas a banear a ti mismo?, pedazo de estupido.')
         }
         if (user.id === interaction.guild.me.id) {
-            return interaction.reply('Por favor no hagas eso, me gusta aqui :(')
+            return interaction.reply('Por favor no hagas eso, me gusta estar aqui :(')
         }
         if (!user.bannable) {
             const errorembed = new MessageEmbed()
@@ -53,7 +53,7 @@ module.exports = {
         }
         const motivo = interaction.options.getString('razon')
 
-        await user.ban(user).then(async => {
+        await user.ban({reason: `Mod responsable: ${interaction.user.username}`}).then(async => {
             const embed2 = new MessageEmbed()
             .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
             .setColor(config.defaultSuccessColor)
