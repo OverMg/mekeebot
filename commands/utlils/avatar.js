@@ -10,21 +10,21 @@ module.exports = {
     async run(client, interaction, language) {
         const user = interaction.options.getUser('miembro')
         if (user) {
-            const embed = new MessageEmbed()
-            .setAuthor({ name: `${user.user.username}`, iconURL: `${user.user.displayAvatarURL()}`})
-            .setColor(config.defaultSuccessColor)
-            .setDescription(client.languages.__mf({phrase: 'avatar.miembro', locale: language}, {username: user.username}))
-            .setImage(user.user.displayAvatarURL({dynamic: true, size: 4096}))
-            .setFooter(client.user.username, client.user.avatarURL())
-            return interaction.reply({embeds: [embed]})
+            const embed1 = new MessageEmbed()
+                .setAuthor({ name: `${user.username}`, iconURL: `${user.displayAvatarURL()}` })
+                .setColor(config.defaultSuccessColor)
+                .setDescription(client.languages.__mf({ phrase: 'avatar.miembro', locale: language }, { username: user.username }))
+                .setImage(user.displayAvatarURL({dynamic: true, size: 4096}))
+                .setFooter(client.user.username, client.user.avatarURL())
+            return interaction.reply({ embeds: [embed1] })
         } else {
             const embed = new MessageEmbed()
-            .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
-            .setColor(config.defaultSuccessColor)
-            .setDescription(client.languages.__mf({phrase: 'avatar.self', locale: language}))
-            .setImage(interaction.user.displayAvatarURL({dynamic: true, size: 4096}))
-            .setFooter(client.user.username, client.user.avatarURL())
-            return interaction.reply({embeds: [embed]})
+                .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}` })
+                .setColor(config.defaultSuccessColor)
+                .setDescription(client.languages.__mf({ phrase: 'avatar.self', locale: language }))
+                .setImage(interaction.user.displayAvatarURL({ dynamic: true, size: 4096 }))
+                .setFooter(client.user.username, client.user.avatarURL())
+            return interaction.reply({ embeds: [embed] })
         }
     }
 }
