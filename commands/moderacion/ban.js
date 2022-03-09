@@ -49,7 +49,7 @@ module.exports = {
                 .setTitle(client.languages.__mf({phrase: 'utilities.errorEmbed', locale: language}))
                 .setDescription(`No puedo banear a un miembro con rol igual o mal alto que el tuyo`)
                 .setFooter(user.user.username, user.user.avatarURL());
-            return message.channel.send({embeds: [errorembed]});
+            return interaction.reply({embeds: [errorembed]});
         }
         const motivo = interaction.options.getString('razon')
 
@@ -57,7 +57,7 @@ module.exports = {
             const embed2 = new MessageEmbed()
             .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
             .setColor(config.defaultSuccessColor)
-            .setTitle(`Ha usado /kick`)
+            .setTitle(`Ha usado /ban`)
             .addField('He baneado a', "```" + `${user.displayName}` + "```", false)
             .addField('Motivo', "```" + `${motivo}` + "```", false)
             .setFooter(client.user.username, client.user.avatarURL())
