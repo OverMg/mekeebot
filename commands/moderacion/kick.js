@@ -56,7 +56,7 @@ module.exports = {
         
         const motivo = interaction.options.getString('razon')
 
-        await user.kick({reason: `Mod Responsable: ${interaction.user.username}`}).then(async => {     
+        await user.kick({reason: `Mod responsable: ${interaction.user.username}`}).then(async => {
             const embed2 = new MessageEmbed()
             .setAuthor({ name: `${interaction.user.username}`, iconURL: `${interaction.user.displayAvatarURL()}`})
             .setColor(config.defaultSuccessColor)
